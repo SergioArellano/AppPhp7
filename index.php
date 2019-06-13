@@ -22,45 +22,49 @@
     </header>
 <section id="contenedor">
 <section  class="problema">
-  <h2>Problema: Cálcular la densidad de la Tierra</h2>
-  <p>Descripción:</p>
-  <p>El radio de la Tierra es 6 378 km y su masa es 5.97E24 kg. <br>
-a) ¿Cuál es la densidad promedio de la Tierra?<br>
-b) Si el radio de la Tierra se redujera a una tercera parte y su masa no cambiará, cuál serı́a su densidad?<br>
-c) Si el radio de la Tierra y su masa se redujera a una
-tercera parte, ¿su densidad serı́a la misma? ¿por qué?</p>
+<h3>Arellano Mariaca Sergio Uriel</h3>
+<h2>Problema: TIEMPO DE LA NAVE EN LLEGAR A MARTE</h2>
+<p> Suponiendo que una nave viaja a 340 m/s.<p>
+<p>Descripción:</p>
+<p><br>
+a) ¿cunto tardaria la nave en llegar a marte
+suponiendo que la tierra y marte no se movieran?</p>
 </section>
 <section class="formulas">
 <h2>Fórmulas</h2>
-    Densidad = Masa/Volumen<br>
-    Volumen=(4/3)pi*r*r*r
+  t=d/v<br>
 </section>
 <section class="datos">
 <h2>Datos:</h2>
-   m= 5.97E24 Kg. <br>
-   r= 6378 Km.
+
+dtm=distancia tierra-marte=227.9 millones km <br>
+   v=velocidad de la nave= 340m/s.
 </section>
 <section class="calculos">
 <h2>Solución</h2>
-   <p>a)La densidad de la Tierra es:<br>
-    densidad = 5.97E24 Kg/volumen (m) <br>
-    volumen= (4/3)*pi*(6378000)*(6378000)*(6378000)</p>
+<p>a)Tiempo de llegada de la nave a marte<br>
+   tiempo= distancia/velocidad <br>
+   tiempo= 227.9 km/340 m/s <br>
+   tiempo=(227.9)(0.2777) = 63.2878 m/s <br>
+   tiempo=(63.2878 m/s)/(340 m/s)</p>
 </section>
 <?php
-     function calcula_densidad(){
-        $PI=3.141592;
-        $masa= 5.97E24;
-        $radio= 6378e3;
-        $volumen= (4/3)*$PI*$radio*$radio*$radio;
-        $densidad= $masa/$volumen;
-        return $densidad;
+function calcula_tiempo(){
+     $distancia =227.9;
+    $velocidad= 340;
+    $km=0.27777;
+    $t1 = $distancia*$km;
+    $t2=$t1/$velocidad;
+ $t=0.8100000;
+  return $t;
      }
+
 ?>
 <section class="resultado">
 <h2>Resultado:</h2>
 <div id="resultadoA"></div>
 <?php
- print "<h1> resultado: densidad = ".calcula_densidad(). " kg/(metro cubico)</h1>";
+ print "<h1> resultado: tiempo= ".calcula_tiempo(). " m/s(metro cubico)</h1>";
 ?>
 </section>
 </section>
